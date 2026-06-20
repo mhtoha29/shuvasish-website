@@ -84,8 +84,8 @@ export default function Navigation() {
             {NAVS.map(n => (
               <button key={n.id} onClick={() => go(n.id)} style={{
                 background: 'none', border: 'none', cursor: 'pointer',
-                fontSize: '11px', fontWeight: 500,
-                color: active === n.id ? 'var(--white)' : 'rgba(240,244,255,0.42)',
+                fontSize: '13px', fontWeight: 500,
+                color: active === n.id ? 'var(--white)' : 'rgba(240,244,255,0.70)',
                 padding: '6px 10px',
                 position: 'relative',
                 transition: 'color 0.3s',

@@ -186,7 +186,7 @@ export default function Speaker() {
                   textAlign: 'center',
                 }}>
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(26px, 2.6vw, 38px)', fontWeight: 800, color: s.c }}>{s.n}</div>
-                  <div className="mono" style={{ fontSize: '9px', opacity: 0.45, marginTop: '5px' }}>{s.l}</div>
+                  <div className="mono" style={{ fontSize: '11px', color: 'rgba(240,244,255,0.75)', marginTop: '5px' }}>{s.l}</div>
                 </div>
               ))}
             </div>
@@ -241,7 +241,7 @@ export default function Speaker() {
                   }}>{e.year}</div>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontSize: '12px', fontWeight: 600, color: active === i ? '#fff' : 'rgba(240,244,255,0.7)', lineHeight: 1.4 }}>{e.event}</div>
-                    <div className="mono" style={{ fontSize: '8px', opacity: 0.45, marginTop: '3px' }}>{e.role} · {e.loc}</div>
+                    <div className="mono" style={{ fontSize: '10px', color: 'rgba(240,244,255,0.65)', marginTop: '3px' }}>{e.role} · {e.loc}</div>
                   </div>
                   <div style={{ color: active === i ? 'var(--purple)' : 'rgba(155,93,229,0.25)', fontSize: '12px', paddingTop: '2px' }}>◈</div>
                 </div>

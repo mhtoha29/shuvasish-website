@@ -115,7 +115,7 @@ export default function BaapKaBeta() {
               ].map((s, i) => (
                 <div key={i} style={{ padding: '16px', background: 'rgba(255,204,0,0.04)', border: '1px solid rgba(255,204,0,0.06)', textAlign: 'center' }}>
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: '20px', fontWeight: 800, color: s.c }}>{s.n}</div>
-                  <div className="mono" style={{ fontSize: '9px', opacity: 0.5, marginTop: '3px' }}>{s.p}</div>
+                  <div className="mono" style={{ fontSize: '11px', color: 'rgba(240,244,255,0.75)', marginTop: '3px' }}>{s.p}</div>
                 </div>
               ))}
             </div>

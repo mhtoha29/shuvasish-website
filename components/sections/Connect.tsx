@@ -249,7 +249,7 @@ export default function Connect() {
                 </div>
                 <div style={{ textAlign: 'left', flex: 1 }}>
                   <div style={{ fontSize: '15px', fontWeight: 700, color: '#fff' }}>Ask Bhoumik AI</div>
-                  <div className="mono" style={{ color: 'rgba(157,111,255,0.6)', marginTop: '3px', fontSize: '9px' }}>
+                  <div style={{ color: 'var(--purple)', marginTop: '4px', fontSize: '11px', fontWeight: 600, letterSpacing: '1.5px' }}>
                     AI TRAINED AS SHUVASISH · CLICK TO OPEN
                   </div>
                 </div>
@@ -293,7 +293,7 @@ export default function Connect() {
                   <div style={{ color: s.color, flexShrink: 0 }}>{s.icon}</div>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontSize: '13px', fontWeight: 600, color: '#fff' }}>{s.label}</div>
-                    <div className="mono" style={{ fontSize: '8px', color: 'var(--dim)', marginTop: '2px' }}>{s.sub}</div>
+                    <div className="mono" style={{ fontSize: '10px', color: 'rgba(240,244,255,0.70)', marginTop: '2px' }}>{s.sub}</div>
                   </div>
                   <div style={{ fontSize: '10px', color: s.color, opacity: 0.5 }}>↗</div>
                 </a>

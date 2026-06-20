@@ -211,7 +211,7 @@ export default function Engineer() {
               <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 3vw, 44px)', fontWeight: 800, color: s.c, lineHeight: 1 }}>
                 {vis ? <CountUp target={s.n} suffix={s.s} inView={vis} /> : '0'}
               </div>
-              <div style={{ fontSize: '10px', color: 'var(--dim)', letterSpacing: '2px', marginTop: '7px', textTransform: 'uppercase' }}>{s.l}</div>
+              <div style={{ fontSize: '11px', color: 'var(--muted)', letterSpacing: '2px', marginTop: '7px', textTransform: 'uppercase' }}>{s.l}</div>
             </div>
           ))}
         </div>
@@ -276,9 +276,9 @@ export default function Engineer() {
                     fontFamily: 'var(--font-display)', fontSize: '28px', fontWeight: 900,
                     color: m.color, opacity: hov === i ? 0.18 : 0.08, transition: 'opacity 0.3s',
                   }}>{m.idx}</div>
-                  <div className="mono" style={{ color: m.color, opacity: 0.8, marginBottom: '5px', fontSize: '8px', letterSpacing: '2px' }}>{m.year}</div>
+                  <div style={{ fontSize: '12px', fontWeight: 700, color: m.color, marginBottom: '5px', letterSpacing: '2px', fontFamily: 'monospace' }}>{m.year}</div>
                   <div style={{ fontSize: '14px', fontWeight: 700, color: '#fff', marginBottom: '3px', fontFamily: 'var(--font-display)' }}>{m.role}</div>
-                  <div className="mono" style={{ fontSize: '8px', color: 'var(--dim)', marginBottom: '9px', letterSpacing: '0.5px' }}>{m.co}</div>
+                  <div className="mono" style={{ fontSize: '10px', color: 'rgba(240,244,255,0.65)', marginBottom: '9px', letterSpacing: '0.5px' }}>{m.co}</div>
                   <div className="body-md" style={{ fontSize: '12px', lineHeight: 1.75 }}>{m.desc}</div>
                 </div>
               </div>
@@ -354,7 +354,7 @@ export default function Engineer() {
                 >
                   <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: c.c, marginBottom: '8px', boxShadow: `0 0 5px ${c.c}` }} />
                   <div style={{ fontSize: '12px', fontWeight: 700, color: '#fff', marginBottom: '3px' }}>{c.t}</div>
-                  <div className="mono" style={{ opacity: 0.38, fontSize: '8px' }}>{c.s}</div>
+                  <div className="mono" style={{ color: 'rgba(240,244,255,0.65)', fontSize: '10px' }}>{c.s}</div>
                 </div>
               ))}
             </div>
