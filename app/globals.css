@@ -15,8 +15,8 @@
   --gold-dim: rgba(255, 204, 0, 0.12);
   --purple: #9d6fff;
   --white: #f0f4ff;
-  --muted: rgba(240, 244, 255, 0.45);
-  --dim: rgba(240, 244, 255, 0.18);
+  --muted: rgba(240, 244, 255, 0.68);
+  --dim: rgba(240, 244, 255, 0.35);
   --grid: rgba(79, 142, 245, 0.04);
   --grid-accent: rgba(79, 142, 245, 0.09);
 }
@@ -365,3 +365,20 @@ body {
 }
 .btn-glow:hover { color: var(--bg); }
 .btn-glow:hover::before { transform: scaleX(1); }
+
+/* ─── MOBILE RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+  .section { padding: 64px 0; }
+  .sec-number { font-size: clamp(70px, 22vw, 120px); right: -8px; top: -16px; }
+  .display-xl { font-size: clamp(32px, 8vw, 56px); }
+  .display-lg { font-size: clamp(26px, 7vw, 40px); }
+  .display-md { font-size: clamp(22px, 6vw, 32px); }
+  .body-lg { font-size: 15px; }
+  .btn-primary, .btn-outline, .btn-green, .btn-glow { padding: 12px 22px; font-size: 11px; }
+  .card-3d:hover { transform: none; }
+}
+@media (max-width: 480px) {
+  .container { padding: 0 14px; }
+  .section { padding: 52px 0; }
+}

@@ -41,10 +41,18 @@ export default function Hero() {
   const [roleIdx, setRoleIdx] = useState(0);
   const [typed, setTyped] = useState('');
   const [nameComplete, setNameComplete] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const particleRef = useRef<HTMLCanvasElement>(null);
   const threeRef = useRef<HTMLCanvasElement>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const mouseRef = useRef({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   // Typewriter
   useEffect(() => {
@@ -274,10 +282,14 @@ export default function Hero() {
       <div className="scanline" style={{ zIndex: 4 }} />
 
       {/* ════════════════════════════════════════════════
-          RIGHT SIDE — HERO IMAGE PANEL
+          IMAGE PANEL — right 46% on desktop, top 48% on mobile
       ════════════════════════════════════════════════ */}
       <div style={{
-        position: 'absolute', right: 0, top: 0, bottom: 0, width: '46%', zIndex: 5,
+        position: 'absolute', zIndex: 5,
+        ...(isMobile
+          ? { top: 0, left: 0, right: 0, height: '48%' }
+          : { right: 0, top: 0, bottom: 0, width: '46%' }
+        ),
       }}>
         {/* Image slides */}
         {SLIDES.map((s, i) => (
@@ -350,29 +362,33 @@ export default function Hero() {
       </div>
 
       {/* ════════════════════════════════════════════════
-          LEFT SIDE — TEXT CONTENT
+          CONTENT — left 54% on desktop, bottom 58% on mobile
       ════════════════════════════════════════════════ */}
       <div style={{
-        position: 'absolute', inset: 0, zIndex: 6,
-        display: 'flex', alignItems: 'center',
-        paddingLeft: '60px',
-        paddingRight: 'calc(46% + 24px)',
+        position: 'absolute', zIndex: 6,
+        display: 'flex', alignItems: isMobile ? 'flex-start' : 'center',
+        ...(isMobile
+          ? { left: 0, right: 0, bottom: 0, top: '36%', padding: '20px 20px 0', background: 'linear-gradient(180deg, transparent 0%, #010812 14%)' }
+          : { inset: 0, paddingLeft: '60px', paddingRight: 'calc(46% + 24px)' }
+        ),
       }}>
         <div style={{ width: '100%' }}>
 
           {/* Coord tag */}
+          {!isMobile && (
           <div className="mono" style={{ marginBottom: '24px', opacity: 0.35, fontSize: '9px' }}>
             23.8103°N · 90.4125°E · DHAKA·BD
           </div>
+          )}
 
           {/* Name */}
           <h1 style={{
             fontFamily: 'var(--font-display, Syne), sans-serif',
-            fontSize: 'clamp(32px, 3.8vw, 58px)',
+            fontSize: isMobile ? 'clamp(30px, 8vw, 46px)' : 'clamp(32px, 3.8vw, 58px)',
             fontWeight: 900,
             lineHeight: 0.9,
             letterSpacing: '-0.035em',
-            marginBottom: '28px',
+            marginBottom: isMobile ? '14px' : '28px',
             color: '#fff',
           }}>
             {lines.map((line, i) => (
@@ -387,9 +403,9 @@ export default function Hero() {
 
           {/* Accent */}
           <div style={{
-            fontSize: 'clamp(10px, 1.1vw, 13px)', fontWeight: 700, letterSpacing: '6px',
+            fontSize: isMobile ? '10px' : 'clamp(10px, 1.1vw, 13px)', fontWeight: 700, letterSpacing: '4px',
             textTransform: 'uppercase', color: slide.accentColor,
-            marginBottom: '14px', minHeight: '20px',
+            marginBottom: isMobile ? '6px' : '14px', minHeight: '18px',
             opacity: nameComplete ? 1 : 0, transition: 'opacity 0.5s, color 0.8s',
           }}>
             ◈ {slide.accent}
@@ -397,8 +413,8 @@ export default function Hero() {
 
           {/* Role */}
           <div style={{
-            fontSize: 'clamp(13px, 1.3vw, 17px)', color: 'rgba(220,228,255,0.5)',
-            marginBottom: '44px', minHeight: '26px',
+            fontSize: isMobile ? '13px' : 'clamp(13px, 1.3vw, 17px)', color: 'rgba(220,228,255,0.65)',
+            marginBottom: isMobile ? '20px' : '44px', minHeight: '22px',
             opacity: nameComplete ? 1 : 0, transition: 'opacity 0.8s 0.3s',
             fontFamily: 'var(--font-body)',
           }}>
@@ -406,6 +422,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
+          {!isMobile && (
           <div style={{
             display: 'flex', marginBottom: '44px',
             opacity: nameComplete ? 1 : 0, transition: 'opacity 0.8s 0.5s',
@@ -422,10 +439,11 @@ export default function Hero() {
               }}>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px, 2.5vw, 38px)', fontWeight: 800, color: '#fff', lineHeight: 1 }}>{s.n}</div>
                 <div style={{ fontSize: '9px', color: 'var(--blue)', fontWeight: 700, letterSpacing: '2px', marginTop: '4px' }}>{s.l}</div>
-                <div style={{ fontSize: '8px', color: 'rgba(240,244,255,0.22)', letterSpacing: '1.5px' }}>{s.sub}</div>
+                <div style={{ fontSize: '8px', color: 'rgba(240,244,255,0.35)', letterSpacing: '1.5px' }}>{s.sub}</div>
               </div>
             ))}
           </div>
+          )}
 
           {/* CTAs */}
           <div style={{
@@ -448,7 +466,7 @@ export default function Hero() {
           {/* Slide dots */}
           <div style={{
             display: 'flex', alignItems: 'center', gap: '8px',
-            marginTop: '52px',
+            marginTop: isMobile ? '20px' : '52px',
             opacity: nameComplete ? 1 : 0, transition: 'opacity 0.8s 0.9s',
           }}>
             {SLIDES.map((_, i) => (
@@ -466,7 +484,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div style={{
-        position: 'absolute', bottom: '40px', left: '60px',
+        position: 'absolute', bottom: '24px', left: isMobile ? '20px' : '60px',
         display: 'flex', alignItems: 'center', gap: '10px',
         zIndex: 7, opacity: 0.35,
       }}>
