@@ -31,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${syne.variable} ${spaceGrotesk.variable}`}>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Botpress floating chat widget */}
         <script
           dangerouslySetInnerHTML={{

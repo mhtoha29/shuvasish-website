@@ -22,10 +22,10 @@ export default function ContentHub() {
   return (
     <section
       id="content"
-      className="blueprint-grid"
-      style={{ padding: '120px 80px', position: 'relative' }}
+      className="blueprint-grid section"
+      style={{ position: 'relative' }}
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div className="container">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '48px', flexWrap: 'wrap', gap: '24px' }}>
           <div>
             <span className="sec-label">06 / CONTENT HUB</span>

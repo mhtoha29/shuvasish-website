@@ -120,14 +120,14 @@ export default function Frequency() {
   return (
     <section
       id="frequency"
+      className="section"
       style={{
-        padding: '120px 80px',
         background: 'linear-gradient(180deg, #030d1e 0%, #020810 50%, #030d1e 100%)',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <span className="sec-label" style={{ color: 'var(--purple)', justifyContent: 'center', display: 'flex' }}>
             05 / THE FREQUENCY
