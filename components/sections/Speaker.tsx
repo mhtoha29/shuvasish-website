@@ -87,7 +87,7 @@ export default function Speaker() {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }}>
+        <div className="rg-2" style={{ gap: '48px', alignItems: 'start' }}>
 
           {/* LEFT — Images */}
           <div>
@@ -121,7 +121,7 @@ export default function Speaker() {
             </div>
 
             {/* 3-photo strip */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px', marginBottom: '20px' }}>
+            <div className="rg-3-2" style={{ gap: '8px', marginBottom: '20px' }}>
               {[
                 { src: '/images/speach time.jpg', label: 'In Flow' },
                 { src: '/images/presentation time.jpg', label: 'The Pitch' },

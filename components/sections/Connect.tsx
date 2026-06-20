@@ -204,7 +204,7 @@ export default function Connect() {
         </div>
 
         {/* Session cards — 3 col */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '80px' }}>
+        <div className="rg-3" style={{ gap: '16px', marginBottom: '80px' }}>
           {SESSIONS.map((s, i) => <SessionCard key={i} s={s} idx={i} />)}
         </div>
 
@@ -216,7 +216,7 @@ export default function Connect() {
         </div>
 
         {/* Bottom row: AI + Socials */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px' }}>
+        <div className="rg-2" style={{ gap: '48px' }}>
 
           {/* Bhoumik AI */}
           <div>

@@ -185,7 +185,7 @@ export default function Frequency() {
         </div>
 
         {/* Identity buttons */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px', marginBottom: '32px' }}>
+        <div className="rg-4" style={{ gap: '12px', marginBottom: '32px' }}>
           {IDENTITIES.map(id => (
             <button
               key={id.key}

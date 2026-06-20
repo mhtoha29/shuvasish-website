@@ -72,7 +72,7 @@ export default function BaapKaBeta() {
         </div>
 
         {/* Main grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }}>
+        <div className="rg-2" style={{ gap: '48px', alignItems: 'start' }}>
           {/* Hero image */}
           <div style={{ opacity: vis ? 1 : 0, transform: vis ? 'none' : 'translateX(-20px)', transition: 'opacity 0.8s, transform 0.8s' }}>
             <div style={{ position: 'relative' }}>
@@ -107,7 +107,7 @@ export default function BaapKaBeta() {
             </div>
 
             {/* Platform stats */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '2px', marginTop: '2px' }}>
+            <div className="rg-3-2" style={{ gap: '2px', marginTop: '2px' }}>
               {[
                 { p: 'Facebook', n: '288K', c: '#1877f2' },
                 { p: 'YouTube', n: '86K', c: '#ff0000' },

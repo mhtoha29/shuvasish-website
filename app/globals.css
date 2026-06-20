@@ -366,6 +366,16 @@ body {
 .btn-glow:hover { color: var(--bg); }
 .btn-glow:hover::before { transform: scaleX(1); }
 
+/* ─── RESPONSIVE GRIDS ─── */
+/* Use these classes instead of inline gridTemplateColumns for auto mobile stacking */
+.rg-2 { display: grid; grid-template-columns: 1fr 1fr; }
+.rg-3 { display: grid; grid-template-columns: repeat(3, 1fr); }
+.rg-3-2 { display: grid; grid-template-columns: repeat(3, 1fr); }
+.rg-4 { display: grid; grid-template-columns: repeat(4, 1fr); }
+
+/* ─── LABEL GLOW (better contrast on dark bg) ─── */
+.label { text-shadow: 0 0 18px rgba(79, 142, 245, 0.35); }
+
 /* ─── MOBILE RESPONSIVE ─── */
 @media (max-width: 768px) {
   .container { padding: 0 16px; }
@@ -377,8 +387,14 @@ body {
   .body-lg { font-size: 15px; }
   .btn-primary, .btn-outline, .btn-green, .btn-glow { padding: 12px 22px; font-size: 11px; }
   .card-3d:hover { transform: none; }
+  /* Grid responsive overrides */
+  .rg-2 { grid-template-columns: 1fr; }
+  .rg-3 { grid-template-columns: 1fr; }
+  .rg-3-2 { grid-template-columns: repeat(2, 1fr); }
+  .rg-4 { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 480px) {
   .container { padding: 0 14px; }
   .section { padding: 52px 0; }
+  .rg-3-2 { grid-template-columns: 1fr; }
 }

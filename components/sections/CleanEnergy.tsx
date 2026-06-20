@@ -73,11 +73,11 @@ export default function CleanEnergy() {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px' }}>
+        <div className="rg-2" style={{ gap: '48px' }}>
           {/* Left */}
           <div>
             {/* Impact numbers */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px', marginBottom: '32px' }}>
+            <div className="rg-2" style={{ gap: '2px', marginBottom: '32px' }}>
               {[
                 { n: 37000, s: '+', l: 'LinkedIn Community', c: 'var(--green)' },
                 { n: 14, s: '+', l: 'Years Experience', c: 'var(--blue)' },
@@ -150,7 +150,7 @@ export default function CleanEnergy() {
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '20px' }}>
+            <div className="rg-2" style={{ gap: '12px', marginBottom: '20px' }}>
               {['/images/awared.jpeg', '/images/bhoumik award.jpg'].map((src, i) => (
                 <div key={i} style={{ position: 'relative', overflow: 'hidden' }}>
                   <Image src={src} alt="Award" width={260} height={200}

@@ -55,9 +55,9 @@ function GearCanvas() {
         return new THREE.ExtrudeGeometry(shape, { depth, bevelEnabled: false });
       }
 
-      const lineMat1 = new THREE.LineBasicMaterial({ color: 0x4f8ef5, transparent: true, opacity: 0.22 });
-      const lineMat2 = new THREE.LineBasicMaterial({ color: 0x4f8ef5, transparent: true, opacity: 0.14 });
-      const lineMat3 = new THREE.LineBasicMaterial({ color: 0x00e5a0, transparent: true, opacity: 0.10 });
+      const lineMat1 = new THREE.LineBasicMaterial({ color: 0x4f8ef5, transparent: true, opacity: 0.42 });
+      const lineMat2 = new THREE.LineBasicMaterial({ color: 0x4f8ef5, transparent: true, opacity: 0.28 });
+      const lineMat3 = new THREE.LineBasicMaterial({ color: 0x00e5a0, transparent: true, opacity: 0.22 });
 
       // Large gear — 18 teeth, right side
       const bigGeo = buildGear(18, 9.5, 7.5, 2.0, 1.8);
@@ -185,7 +185,7 @@ export default function Engineer() {
         </div>
 
         {/* ── STATS STRIP ── */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2px', marginBottom: '64px' }}>
+        <div className="rg-4" style={{ gap: '2px', marginBottom: '64px' }}>
           {[
             { n: 14, s: '+', l: 'Years Experience', c: 'var(--blue)' },
             { n: 350, s: '', l: 'People Led', c: 'var(--red)' },
@@ -217,7 +217,7 @@ export default function Engineer() {
         </div>
 
         {/* ── MAIN GRID ── */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'start' }}>
+        <div className="rg-2" style={{ gap: '48px', alignItems: 'start' }}>
 
           {/* ── TIMELINE ── */}
           <div style={{ position: 'relative' }}>

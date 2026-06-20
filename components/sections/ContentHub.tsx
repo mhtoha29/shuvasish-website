@@ -57,11 +57,7 @@ export default function ContentHub() {
         </div>
 
         {/* Video grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '16px',
-        }}>
+        <div className="rg-3" style={{ gap: '16px' }}>
           {filtered.map((v, i) => (
             <div
               key={v.id}
@@ -142,7 +138,7 @@ export default function ContentHub() {
         </div>
 
         {/* Speaking section */}
-        <div style={{ marginTop: '48px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+        <div className="rg-2" style={{ marginTop: '48px', gap: '16px' }}>
           <div style={{ position: 'relative' }}>
             <Image
               src="/images/speach time.jpg"
